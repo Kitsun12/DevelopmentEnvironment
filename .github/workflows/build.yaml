@@ -54,6 +54,5 @@ jobs:
           path: reports
 
       - uses: actions/checkout@v2
-      - name: Install NPM dependencies
-        run: |
-          npm install --production --unsafe-perm
+      - name: Clean the repository
+          run: git clean -ffdx
