@@ -46,7 +46,6 @@ jobs:
           Report-Format: 'ALL'
           Report-Location: '/github/workspace/reports'
           Log-Name: 'log.txt'
-
       - name: Archive dependency check reports
         uses: actions/upload-artifact@v1
         with:
