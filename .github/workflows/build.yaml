@@ -38,19 +38,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-      - uses: sburris/dependency-check-action@master
+      - name: Run Dependency-Check
+        uses: sburris/dependency-check-action@v4
         with:
           Project-Name: TestApp
-              required: true
-          Source-Location:
-              required: false
-              default: '/github/workspace'
-          Report-Format:
-              required: false
-              default: 'ALL'
-          Report-Location:
-              required: false
-              default: '/github/workspace/reports'
-          Log-Name:
-              required: false
-              default: log.txt
+          Source-Location: .
+          Report-Format: ALL
+          Report-Location: reports
+          Log-Name: log.txt
