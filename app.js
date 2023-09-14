@@ -1,7 +1,6 @@
 const http = require('http');
 const fs = require('fs');
 const os = require('os');
-const PASSWORD = "hello"
 // Get the greeting from the "GREETING" environment variable, or use a default value
 const greeting = process.env.GREETING || 'Hello World!';
 
@@ -51,5 +50,3 @@ process.on('SIGTERM', () => {
     process.exit(0);
   });
 });
-
-function toto () {}
