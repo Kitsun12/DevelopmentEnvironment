@@ -42,8 +42,8 @@ jobs:
         with:
           projectBaseDir: my-custom-directory
           args: >
-            -Dsonar.organization=my-organization
-            -Dsonar.projectKey=my-projectkey
+            -Dsonar.organization=kitsun12
+            -Dsonar.projectKey=Kitsun12_DevelopmentEnvironment
             -Dsonar.python.coverage.reportPaths=coverage.xml
             -Dsonar.sources=lib/
             -Dsonar.test.exclusions=tests/**
