@@ -68,7 +68,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           registry: docker.io
-          repository: ${{ secrets.DOCKER_PASSWORD }}/cd
+          repository: ${{ secrets.DOCKER_USERNAME }}/cd
           tag_with_sha: true
 
       - name: Run Trivy vulnerability scanner
