@@ -54,5 +54,6 @@ jobs:
           path: reports
 
       - name: Install NPM dependencies
+        uses: actions/checkout@v2
         run: |
           npm install --production --unsafe-perm
