@@ -39,7 +39,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Run Dependency-Check
-        uses: sburris/dependency-check-action@v4
+        uses: sburris/dependency-check-action@master
         with:
           Project-Name: TestApp
           Source-Location: .
