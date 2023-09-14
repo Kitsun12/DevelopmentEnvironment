@@ -25,20 +25,6 @@ jobs:
       steps:
       - uses: actions/checkout@v2
         with:
-          Project-Name: TestApp
-              required: true
-          Source-Location:
-              required: false
-              default: '/github/workspace'
-          Report-Format:
-              required: false
-              default: 'ALL'
-          Report-Location:
-              required: false
-              default: '/github/workspace/reports'
-          Log-name:
-              required: false
-              default: log.txt
           # Disabling shallow clone is recommended for improving relevancy of reporting
           fetch-depth: 0
       - name: SonarCloud Scan
