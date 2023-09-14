@@ -20,29 +20,29 @@ jobs:
             registry: docker.io
             repository: ${{ secrets.DOCKER_USERNAME }}/cd
             tag_with_sha: true
-  sonarcloud:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        Project-Name: TestApp
-            required: true
-        Source-Location:
-            required: false
-            default: '/github/workspace'
-        Report-Format:
-            required: false
-            default: 'ALL'
-        Report-Location:
-            required: false
-            default: '/github/workspace/reports'
-        Log-name:
-            required: false
-            default: log.txt
-        # Disabling shallow clone is recommended for improving relevancy of reporting
-        fetch-depth: 0
-    - name: SonarCloud Scan
-      uses: Kitsun12/DevelopmentEnvironment@main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    sonarcloud:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+        with:
+          Project-Name: TestApp
+              required: true
+          Source-Location:
+              required: false
+              default: '/github/workspace'
+          Report-Format:
+              required: false
+              default: 'ALL'
+          Report-Location:
+              required: false
+              default: '/github/workspace/reports'
+          Log-name:
+              required: false
+              default: log.txt
+          # Disabling shallow clone is recommended for improving relevancy of reporting
+          fetch-depth: 0
+      - name: SonarCloud Scan
+        uses: Kitsun12/DevelopmentEnvironment@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
